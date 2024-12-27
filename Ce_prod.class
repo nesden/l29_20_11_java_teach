@@ -1,0 +1,33 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.io.PrintStream;
+
+public class Ce {
+    public Ce() {
+    }
+
+    public static void main(String[] args) {
+        String fullName = "Amitay Gabay";
+        String[] parts = fullName.split(" ");
+        String firstName = parts[0];
+        String lastName = parts[1];
+        String formatedString = String.format("Welcome to the course: your first name is: %s and your last name is: %s", firstName, lastName);
+        System.out.println(formatedString);
+        int indexOfLastName = formatedString.indexOf(lastName);
+        System.out.println("index of last name: " + indexOfLastName);
+        String stringWithoutFirstName = formatedString.replace(firstName, "");
+        System.out.println("Result with replace: " + stringWithoutFirstName);
+        int startIndex = formatedString.indexOf(firstName);
+        int lastIndex = startIndex + firstName.length();
+        PrintStream var10000 = System.out;
+        String var10001 = formatedString.substring(0, startIndex);
+        var10000.println("Result with substring: " + var10001 + formatedString.substring(lastIndex));
+        System.out.println(stringWithoutFirstName.contains(firstName));
+        System.out.println(stringWithoutFirstName.contains(lastName));
+        System.out.println(stringWithoutFirstName.indexOf(firstName) >= 0);
+        System.out.println(stringWithoutFirstName.indexOf(lastName) >= 0);
+    }
+}
