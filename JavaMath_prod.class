@@ -1,0 +1,32 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+public class JavaMath {
+    public JavaMath() {
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Math.max(18292938, Math.max(3847474, 84847456)));
+        System.out.println(Math.min(18292938, Math.min(3847474, 84847456)));
+        System.out.println(Math.floor(Math.random() * 200.0 + 51.0));
+        System.out.println(Math.ceil(Math.random() * 5.0));
+        System.out.println(Math.sqrt(144.0));
+        System.out.println(Math.pow(3.0, 4.0));
+        int upper = 372;
+        int lower = 367;
+        System.out.println((int)(Math.random() * (double)(upper - lower) + (double)lower + 1.0));
+        System.out.println(Math.E);
+        System.out.println(Math.exp(10.0));
+        System.out.println(Math.expm1(1.0));
+        System.out.println(Math.round(1.5));
+        System.out.println(Math.log(Math.pow(Math.E, 5.0)));
+        System.out.println(Math.log10(Math.sqrt(10000.0)));
+        System.out.println(Math.PI);
+        System.out.println("Result in radians: " + Math.toRadians(30.0));
+        System.out.println("Result in radians: 0.5235987755982988");
+        System.out.println("Result in degrees: " + Math.toDegrees(1.0));
+        System.out.println("Result in degrees: 57.29577951308232");
+    }
+}
