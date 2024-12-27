@@ -1,0 +1,57 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import java.io.PrintStream;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+public class Time {
+    public Time() {
+    }
+
+    public static void main(String[] args) {
+        System.out.println("LocalDate:\n");
+        LocalDate today = LocalDate.now();
+        System.out.println("Today's date: " + String.valueOf(today));
+        LocalDate specificDate = LocalDate.of(2024, 11, 30);
+        System.out.println("Last of month date: " + String.valueOf(specificDate));
+        System.out.println(today.plusDays(5L));
+        System.out.println(today.minusDays(5L));
+        int currentYear = today.getYear();
+        System.out.println("Current year: " + currentYear);
+        System.out.println("Current Month: " + String.valueOf(today.getMonth()));
+        System.out.println("Current day of month: " + today.getDayOfMonth());
+        System.out.println("Day of week: " + String.valueOf(today.getDayOfWeek()));
+        System.out.println(today.withYear(2025).withMonth(8));
+        System.out.println();
+        System.out.println("LocalTime:\n");
+        LocalTime now = LocalTime.now();
+        System.out.println("Now is: " + String.valueOf(now));
+        int hour = now.getHour();
+        int minute = now.getMinute();
+        int second = now.getSecond();
+        int nano = now.getNano();
+        System.out.printf("%d:%d:%d.%d%n", hour, minute, second, nano);
+        System.out.println();
+        System.out.println("LocalDateTime:\n");
+        LocalDateTime nowDateTime = LocalDateTime.now();
+        System.out.println("Current date-time: " + String.valueOf(nowDateTime));
+        LocalDateTime specificDateTime = LocalDateTime.of(2025, 1, 1, 0, 25, 7, 444555666);
+        System.out.println("specific-date-time: " + String.valueOf(specificDateTime));
+        System.out.println("specific-date-time after plus: " + String.valueOf(specificDateTime.plusDays(10L)));
+        System.out.println("specific-date-time after minus: " + String.valueOf(specificDateTime.minusDays(10L)));
+        System.out.println(specificDateTime.plusDays(31L).plusMinutes(35L).minusSeconds(7L).minusNanos(444555666L));
+        PrintStream var10000 = System.out;
+        int var10001 = specificDateTime.getYear();
+        var10000.println("Year: " + var10001 + "\nMonth: " + specificDateTime.getMonth().getValue() + "\nDate: " + specificDateTime.getDayOfMonth() + "\nHour: " + specificDateTime.getHour() + "\nMinute: " + specificDateTime.getMinute() + "\nSecond: " + specificDateTime.getSecond() + "\nNano: " + specificDateTime.getNano());
+        System.out.println();
+        System.out.println("DateTimeFormatter:\n");
+        DateTimeFormatter formatPattern = DateTimeFormatter.ofPattern("dd/MM/yy, HH:mm:ss:nn");
+        String formattedDateTime = nowDateTime.format(formatPattern);
+        System.out.println("Formatted DateTime: " + formattedDateTime);
+    }
+}
